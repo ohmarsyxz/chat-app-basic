@@ -1,0 +1,10 @@
+version: '3.8'
+name: chat-app
+
+services:
+  socket:
+    build: .
+    container_name: socket
+    restart: unless-stopped
+    ports:
+      - "3000:3000"

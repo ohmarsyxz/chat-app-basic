@@ -18,10 +18,12 @@ app.get("/", (req, res) => {
   res.send("Welcome our chat app APIs");
 });
 
-const port = process.env.PORT || 5000;
-const uri = process.env.ATLAS_URI;
+const port = process.env.PORT || 5001;
+const uri =
+  process.env.ATLAS_URI ||
+  "mongodb+srv://ohmmy:OFu5yHFTMvtCdF5i@cluster0.rednj.mongodb.net/chatApp?retryWrites=true&w=majority&appName=Cluster0";
 
-app.listen(port, (req, res) => {
+app.listen(port, "0.0.0.0", (req, res) => {
   console.log(`Server running on port: ${port}`);
 });
 

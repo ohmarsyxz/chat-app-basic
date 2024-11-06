@@ -21,7 +21,7 @@ const ChatBox = () => {
   if (!recipientUser)
     return (
       <p style={{ textAlign: "center", width: "100%" }}>
-        Np conversation selected yet...
+        No conversation selected yet...
       </p>
     );
 
